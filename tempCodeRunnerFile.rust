@@ -1,0 +1,21 @@
+const users = [
+  "  alice smith ",
+  "JOHN DOE",
+  "marcus stone",
+  "Sarah sands",
+  "lucy   LANE",
+  "    sammy simmons  "
+];
+
+function newUser(users) {
+  return users.map (user => {
+    user = user.trim();
+    user= user.toLowerCase();
+    user = user.split(" ");
+    user = user.charAt(0).toUpperCase();
+    
+    return user;
+  })
+}
+
+console.log(newUser(users));
